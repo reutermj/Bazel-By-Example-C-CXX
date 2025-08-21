@@ -1,0 +1,28 @@
+"""Bazel by Example: C/C++
+
+A collection of self-contained and runnable examples demonstrating Bazel concepts
+specifically for C and C++ developers. Covers everything from basic executables
+and libraries to testing, external dependencies, and advanced build configuration.
+"""
+
+# Bazel Module Documentation: https://bazel.build/external/module
+# API documentation: https://bazel.build/rules/lib/globals/module
+
+module(
+    name = "bazel-by-example",
+
+    # Bazel adopts a relaxed form of SemVer for versioning that still allows
+    # for Minimal Version Selection (MVS). This allows multiple dependencies
+    # of a Bazel module to declare a dendency on different, but compatible,
+    # versions of a module and Bazel to resolve the difference.
+    # 
+    # https://bazel.build/external/module#version-format
+    # https://bazel.build/external/module#version-selection
+    version = "1.0.0",
+
+    # The compatibility_level attribute is a version number that indicates backwards 
+    # compatibility for a Bazel module, similar to SemVer's major version number.
+    #
+    # https://bazel.build/external/module#compatibility_level
+    compatibility_level = 1
+)

@@ -1,0 +1,17 @@
+# =============
+# || General ||
+# =============
+# Tells Bazel to use host OS specific configues.
+# This is the equivalent to using --config=linux on Linux, --config=windows on Windows, and 
+# --config=macos on Apple.
+# https://bazel.build/reference/command-line-reference#flag--enable_platform_specific_config
+common --enable_platform_specific_config
+
+# ==========
+# || Test ||
+# ==========
+# By default, Bazel hides test output in log files that you have to manually find and open.
+# This prints a combined stdout/stderr output from failed tests immediately after the test is completed, 
+# ensuring that test output from simultaneous tests are not interleaved with each other.
+# https://bazel.build/docs/user-manual#test-output
+test --test_output=errors
