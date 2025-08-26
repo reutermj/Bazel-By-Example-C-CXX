@@ -1,1 +1,5 @@
+# Bazel adds convenience symlinks to the workspace directory.
+# These provide easy access to build outputs and intermediate files.
+#
+# https://bazel.build/remote/output-directories
 bazel-*
