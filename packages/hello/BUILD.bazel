@@ -1,0 +1,19 @@
+# load() statements are used to import symbols from Starlark (.bzl) files.
+# Here we're importing the rule to build C/C++ executable programs (cc_binary) from rules_cc.
+# https://bazel.build/concepts/build-files#load
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+# cc_binary is the Bazel rule used to create C/C++ executable programs.
+# https://bazel.build/reference/be/c-cpp#cc_binary
+cc_binary(
+    # The name attribute defines the target and executable name.
+    # https://bazel.build/reference/be/c-cpp#cc_binary.name
+    name = "hello",
+
+    # The srcs attribute is the list of all source and header files used to compile the program.
+    # glob(...) is used to find all files that match a particular path patterns.
+    # Don't worry cmake users; glob actually works in Bazel.
+    # https://bazel.build/reference/be/c-cpp#cc_binary.srcs
+    # https://bazel.build/rules/lib/globals/build#glob
+    srcs = glob(["*.c"]),
+)

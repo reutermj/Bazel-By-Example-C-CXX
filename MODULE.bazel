@@ -7,7 +7,6 @@ and libraries to testing, external dependencies, and advanced build configuratio
 
 # Bazel Module Documentation: https://bazel.build/external/module
 # API documentation: https://bazel.build/rules/lib/globals/module
-
 module(
     name = "bazel-by-example",
 
@@ -26,3 +25,29 @@ module(
     # https://bazel.build/external/module#compatibility_level
     compatibility_level = 1
 )
+
+# rules_cc is Bazel's official ruleset for C and C++ programming languages.
+# It provides essential build rules like:
+#   - cc_binary: Builds executable programs from your C/C++ source code
+#   - cc_library: Creates reusable code libraries, both static and shared
+#   - cc_test: Compiles and runs tests for your C/C++ code
+#
+# https://github.com/bazelbuild/rules_cc
+bazel_dep(name = "rules_cc", version = "0.2.0")
+
+# toolchains_cc is a Bazel module providing C/C++ toolchain configurations.
+#
+# toolchains_cc simplifies the process of setting up C/C++ toolchains by:
+# - being easy to configuration with minimal setup required,
+# - focusing on hermetic builds that are reproducible and isolated from the host system, and
+# - providing cross-platform support for Linux, macOS, and Windows environments.
+#
+# This module helps reduce "works on my machine" issues by providing consistent builds
+# across different development and CI environments.
+bazel_dep(name = "toolchains_cc", dev_dependency = True)
+git_override(
+    module_name = "toolchains_cc",
+    remote = "https://github.com/reutermj/toolchains_cc",
+    commit = "6642c76585f357bc6217eb4074eeb66ecc74f55a",
+)
+register_toolchains("@toolchains_cc", dev_dependency = True)
