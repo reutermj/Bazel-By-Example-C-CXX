@@ -40,7 +40,7 @@ This guide embeds Bazelisk in the repo (`tools/bazelisk-*`) and provides wrapper
 
 ### .bazelversion
 
-The `.bazelrc` is a configuration file used with Bazelisk. It specifies the exact version of Bazel used to build the project. This helps prevent "works on my machine issues" where the particular version of Bazel on the local system leads to build failures.
+The `.bazelversion` is a configuration file used with Bazelisk. It specifies the exact version of Bazel used to build the project. This helps prevent "works on my machine issues" where the particular version of Bazel on the local system leads to build failures.
 
 See more:
 * Bazelisk version algorithm: https://github.com/bazelbuild/bazelisk?tab=readme-ov-file#how-does-bazelisk-know-which-bazel-version-to-run
