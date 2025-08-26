@@ -62,7 +62,7 @@ See more:
 
 ## Trying it out
 
-Open this branch in a [Codespace](https://github.com/features/codespaces) by clicking `Code` -> `Codespaces` -> `Create codespace on setup` above, or clone it locally with: `git clone --branch setup https://github.com/reutermj/Bazel-By-Example-C-CXX.git`.
+Open this branch in a [Codespace](https://github.com/features/codespaces) by clicking `Code` -> `Codespaces` -> `Create codespace on step1-repo-setup` above, or clone it locally with: `git clone --branch step1-repo-setup https://github.com/reutermj/Bazel-By-Example-C-CXX.git`.
 
 Now lets run our first Bazel command:
 
