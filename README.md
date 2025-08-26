@@ -8,9 +8,9 @@ Let's get started!
 
 ## Table of Contents
 
-[**Repository Setup**](https://github.com/reutermj/Bazel-By-Example-C-CXX/tree/setup) - Essential Bazel files and configuration for any C/C++ project.
+[**Repository Setup**](https://github.com/reutermj/Bazel-By-Example-C-CXX/tree/step1-repo-setup) - Essential Bazel files and configuration for any C/C++ project.
 
-**Hello World / cc_binary** - Your first Bazel C/C++ executable.
+[**Hello World / cc_binary**](https://github.com/reutermj/Bazel-By-Example-C-CXX/tree/step2-hello-world) - Your first Bazel C/C++ executable.
 
 **cc_library** - Building modular, reusable C/C++ libraries.
 
